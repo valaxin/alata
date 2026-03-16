@@ -1,0 +1,25 @@
+:root {
+  --bg-color: rgba(32,32,32,1);
+  --ft-color: rgba(243,243,243,1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background-color: var(--bg-color);
+  color: var(--ft-color);
+  font-family: sans-serif;
+  padding: 0 4vw;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 900;
+}
