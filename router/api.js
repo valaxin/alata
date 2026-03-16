@@ -13,10 +13,15 @@ const text = await readFile('./example.txt',
   }
 )
 
-
-// lives at /api/welcome
-await router.get('/welcome', async (req, res, next) => {
-  res.json({ message: 'Hello World!' })
+// Available at /api/help
+await router.get('/help', async (req, res, next) => {
+  const routes = [ '/help', '/status' ]
+  res.json({
+    routes,
+    base: '/api',
+    message: "Welcome to the help endpoint for this API, there isn't much here I can assure you." 
+  })
 })
+
 
 export default router
