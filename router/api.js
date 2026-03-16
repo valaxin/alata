@@ -13,6 +13,8 @@ const text = await readFile('./example.txt',
   }
 )
 
+
+
 // Available at /api/help
 await router.get('/help', async (req, res, next) => {
   const routes = [ '/help', '/status' ]
@@ -21,6 +23,11 @@ await router.get('/help', async (req, res, next) => {
     base: '/api',
     message: "Welcome to the help endpoint for this API, there isn't much here I can assure you." 
   })
+})
+
+// /api/status
+await router.get('/status', async (req, res, next) => {
+  res.json({ route: '/api/status' })
 })
 
 
